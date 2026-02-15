@@ -54,11 +54,14 @@ export function Callout({
       margin: "24px 0",
       borderLeft: `3px solid ${style.borderColor}`,
       background: style.bg,
-      borderRadius: "0 10px 10px 0",
+      borderRadius: "var(--radius-sm)",
       padding: "16px 20px",
+      boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontWeight: 700, fontSize: 14, color: style.iconColor }}>
-        {style.icon}
+        <span style={{ display: "inline-flex", animation: "icon-pulse 2.5s ease-in-out infinite" }}>
+          {style.icon}
+        </span>
         {title || style.title}
       </div>
       <div style={{ fontSize: 14, color: "var(--text-secondary)", lineHeight: 1.7 }}>{children}</div>

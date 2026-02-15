@@ -7,12 +7,14 @@ import { CodeBlock } from "@/components/content/CodeBlock";
 import { Quiz } from "@/components/content/Quiz";
 import { Exercise, Solution } from "@/components/content/Exercise";
 import { LessonNav } from "@/components/layout/LessonNav";
+import { DirectionQuiz } from "@/components/content/DirectionQuiz";
 
 const components = {
   Callout,
   Quiz,
   Exercise,
   Solution,
+  DirectionQuiz,
   pre: CodeBlock,
 };
 
@@ -65,6 +67,7 @@ export default async function LessonPage({ params }: { params: Promise<{ slug: s
           }}
         >
           <div
+            className="progress-bar"
             style={{
               width: `${((nav.currentIndex + 1) / nav.total) * 100}%`,
               height: "100%",
